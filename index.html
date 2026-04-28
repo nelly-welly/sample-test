@@ -1,11 +1,227 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>samplt</title>
+  <title>devsync CLI Docs</title>
+
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --text: #111827;
+      --card: white;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+    }
+
+    body.dark {
+      --bg: #0f172a;
+      --text: #e5e7eb;
+      --card: #111827;
+      --border: #1f2937;
+      --accent: #60a5fa;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+    }
+
+    /* Sidebar */
+    nav {
+      width: 240px;
+      height: 100vh;
+      position: fixed;
+      background: var(--card);
+      border-right: 1px solid var(--border);
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    nav h2 {
+      margin-top: 0;
+    }
+
+    nav a {
+      display: block;
+      color: var(--text);
+      text-decoration: none;
+      padding: 6px 0;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Main */
+    main {
+      margin-left: 260px;
+      padding: 30px;
+      max-width: 900px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    /* Search */
+    input {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+      background: var(--card);
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px;
+    }
+
+    th {
+      background: var(--bg);
+    }
+
+    /* Notes */
+    .note, .warning, .danger {
+      padding: 12px 16px;
+      border-left: 5px solid;
+      margin: 15px 0;
+      border-radius: 6px;
+    }
+
+    .note { border-color: #3b82f6; background: #eff6ff; }
+    .warning { border-color: #f59e0b; background: #fffbeb; }
+    .danger { border-color: #ef4444; background: #fef2f2; }
+
+    /* Code */
+    pre {
+      background: #111827;
+      color: #f9fafb;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    /* Top bar */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    button {
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      cursor: pointer;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>devsync CLI Documentation</h1>
-  <p>Welcome to the guide.</p>
+
+<!-- SIDEBAR -->
+<nav>
+  <h2>devsync CLI</h2>
+
+  <input type="text" id="search" placeholder="Search docs...">
+
+  <a href="#intro">Introduction</a>
+  <a href="#commands">Commands</a>
+  <a href="#examples">Examples</a>
+</nav>
+
+<!-- MAIN -->
+<main>
+
+  <div class="topbar">
+    <h1>Documentation</h1>
+    <button onclick="toggleDark()">🌙 Toggle Theme</button>
+  </div>
+
+  <!-- INTRO -->
+  <section id="intro">
+    <h2>Introduction</h2>
+    <p>Welcome to the devsync CLI documentation.</p>
+
+    <div class="note">
+      Info: This tool helps you manage projects from CLI.
+    </div>
+  </section>
+
+  <!-- COMMANDS -->
+  <section id="commands">
+    <h2>Commands</h2>
+
+    <table>
+      <tr>
+        <th>Command</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>init</td>
+        <td>Initialize project</td>
+      </tr>
+      <tr>
+        <td>build</td>
+        <td>Build project</td>
+      </tr>
+    </table>
+
+    <div class="warning">
+      Warning: build overwrites output folder.
+    </div>
+  </section>
+
+  <!-- EXAMPLES -->
+  <section id="examples">
+    <h2>Examples</h2>
+
+    <pre>
+devsync init my-app
+devsync build
+    </pre>
+
+    <div class="danger">
+      Danger: Do not run build in system folders.
+    </div>
+  </section>
+
+</main>
+
+<!-- SCRIPT -->
+<script>
+  // Dark mode toggle
+  function toggleDark() {
+    document.body.classList.toggle("dark");
+  }
+
+  // Simple search filter
+  document.getElementById("search").addEventListener("input", function(e) {
+    const value = e.target.value.toLowerCase();
+    document.querySelectorAll("section").forEach(sec => {
+      sec.style.display = sec.innerText.toLowerCase().includes(value)
+        ? "block"
+        : "none";
+    });
+  });
+</script>
+
 </body>
 </html>
