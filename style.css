@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #f8fafc;
+  color: #111827;
+}
+
+/* ===== Layout ===== */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* ===== Sidebar ===== */
+#sidebar {
+  width: 280px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+/* Section headers */
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Nav items */
+.nav-item {
+  display: block;
+  padding: 7px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #111827;
+  font-size: 14px;
+  transition: background 0.15s ease;
+}
+
+.nav-item:hover {
+  background: #f1f5f9;
+}
+
+/* ===== Content ===== */
+#content {
+  flex: 1;
+  padding: 40px;
+  max-width: 900px;
+  overflow-y: auto;
+  line-height: 1.7;
+}
+
+/* Headings */
+h1 {
+  font-size: 28px;
+  margin-top: 0;
+  color: #0f172a;
+}
+
+h2 {
+  margin-top: 24px;
+  font-size: 20px;
+  color: #1f2937;
+}
+
+/* ===== Code blocks ===== */
+pre {
+  background: #0b1220;
+  color: #e2e8f0;
+  padding: 14px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* ===== Tables ===== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 12px;
+  background: #ffffff;
+}
+
+th, td {
+  border: 1px solid #e5e7eb;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #f8fafc;
+  color: #374151;
+}
+
+/* ===== TYPE STYLES (clean + subtle accents) ===== */
+
+/* Concept (blue accent) */
+.concept h1 {
+  color: #2563eb;
+}
+
+/* Task (slate/green-neutral instead of bright green) */
+.task h1 {
+  color: #0f766e;
+}
+
+/* Reference (neutral gray-blue) */
+.reference h1 {
+  color: #475569;
+}
