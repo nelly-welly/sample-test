@@ -1,0 +1,76 @@
+site_name: "PayCart Merchant Docs"
+site_description: "Documentation for the PayCart Merchant Payments Platform — a fictional sample site for portfolio purposes."
+site_author: "Sample Documentation Team"
+
+nav:
+  - Home: index.md
+  - Concepts:
+      - Payment lifecycle: concepts/payment-lifecycle.md
+      - Transaction states: concepts/transaction-states.md
+      - Money movement: concepts/money-movement.md
+  - Getting started:
+      - Quickstart: getting-started/quickstart.md
+  - Onboarding:
+      - Overview: onboarding/overview.md
+  - Integration:
+      - Authentication: integration/authentication.md
+      - Webhooks: integration/webhooks.md
+  - Guides:
+      - Process refunds: guides/refunds.md
+      - Reconcile transactions: guides/reconciliation.md
+      - Manage disputes: guides/disputes.md
+  - Dashboard:
+      - Navigate the dashboard: dashboard/navigate.md
+      - View transactions: dashboard/view-transactions.md
+  - Samples:
+      - Sample merchant: samples/sample-merchant.md
+      - Sample requests: samples/sample-requests.md
+  - Troubleshooting: troubleshooting/common-issues.md
+  - FAQ: faq.md
+  - Release notes: release-notes.md
+  - Reference:
+      - Glossary: reference/glossary.md
+      - Test data: reference/test-data.md
+      - Status codes: reference/status-codes.md
+  - About these docs: about-these-docs.md
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - footnotes
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      base_path:
+        - docs
+      check_paths: true
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://example.com/sample-org/paycart-docs
+
+copyright: "Sample portfolio content. All names, data, and brands are fictional."
