@@ -1,6 +1,12 @@
 ---
 title: Authentication
 description: How to authenticate with the PayCart Merchant Payments Platform.
+type: reference
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [integration, security, authentication]
 ---
 
 # Authentication

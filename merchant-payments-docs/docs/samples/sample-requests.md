@@ -1,6 +1,12 @@
 ---
 title: Sample requests
 description: Copy-pasteable PayCart request and response pairs for the most common operations.
+type: sample
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [sample, integration, requests]
 ---
 
 # Sample requests

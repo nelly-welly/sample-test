@@ -1,6 +1,12 @@
 ---
 title: Quickstart
 description: Make your first sandbox payment with PayCart in under ten minutes.
+type: task
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [getting-started, integration, sandbox]
 ---
 
 # Quickstart

@@ -1,6 +1,12 @@
 ---
 title: Payment lifecycle
 description: How a PayCart payment moves from intent to settled funds.
+type: concept
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [payments, lifecycle, concepts]
 ---
 
 # Payment lifecycle

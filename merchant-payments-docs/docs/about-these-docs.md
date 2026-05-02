@@ -1,6 +1,12 @@
 ---
 title: About these docs
 description: Information architecture, voice, and reuse patterns used in this sample documentation site.
+type: reference
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [meta, style, information-architecture]
 ---
 
 # About these docs

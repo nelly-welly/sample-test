@@ -1,6 +1,12 @@
 ---
 title: Troubleshooting
 description: Common PayCart problems and how to fix them.
+type: troubleshooting
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [troubleshooting, support]
 ---
 
 # Troubleshooting

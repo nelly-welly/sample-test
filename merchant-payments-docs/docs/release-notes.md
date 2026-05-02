@@ -1,6 +1,12 @@
 ---
 title: Release notes
 description: Recent changes to the PayCart Merchant Payments Platform.
+type: release-notes
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [changelog, release-notes]
 ---
 
 # Release notes

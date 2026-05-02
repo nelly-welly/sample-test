@@ -1,6 +1,12 @@
 ---
 title: Test data
 description: Sandbox card numbers, sample customers, and sample merchants for PayCart sandbox testing.
+type: reference
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [sandbox, test-data, reference]
 ---
 
 # Test data
@@ -16,15 +22,18 @@ The card number determines the simulated outcome. CVV, expiry, and name can be a
 
 | Number | Brand | Outcome |
 | --- | --- | --- |
-| `4242 4242 4242 4242` | Visa | Always succeeds. |
-| `4000 0000 0000 0002` | Visa | Always declined (`generic_decline`). |
-| `4000 0000 0000 9995` | Visa | Declined for insufficient funds. |
-| `4000 0027 6000 3184` | Visa | Requires 3-D Secure. Authentication succeeds. |
-| `4000 0084 0000 1629` | Visa | Requires 3-D Secure. Authentication fails. |
-| `5555 5555 5555 4444` | Mastercard | Always succeeds. |
-| `3782 822463 10005` | American Express | Always succeeds. |
-| `4000 0000 0000 0341` | Visa | Authorization succeeds, capture fails. Useful for testing capture-failure handling. |
-| `4000 0000 0000 0119` | Visa | Will dispute after capture. PayCart fires `dispute.created` within five minutes. |
+| `XXXX-XXXX-XXXX-0001` | Visa | Always succeeds. |
+| `XXXX-XXXX-XXXX-0002` | Visa | Always declined (`generic_decline`). |
+| `XXXX-XXXX-XXXX-0003` | Visa | Declined for insufficient funds. |
+| `XXXX-XXXX-XXXX-0004` | Visa | Requires 3-D Secure. Authentication succeeds. |
+| `XXXX-XXXX-XXXX-0005` | Visa | Requires 3-D Secure. Authentication fails. |
+| `XXXX-XXXX-XXXX-0006` | Mastercard | Always succeeds. |
+| `XXXX-XXXXXX-0007`    | American Express | Always succeeds. |
+| `XXXX-XXXX-XXXX-0008` | Visa | Authorization succeeds, capture fails. Useful for testing capture-failure handling. |
+| `XXXX-XXXX-XXXX-0009` | Visa | Will dispute after capture. PayCart fires `dispute.created` within five minutes. |
+
+!!! info "Placeholder format"
+    These numbers use the form `XXXX-XXXX-XXXX-NNNN` to make clear they're documentation placeholders, not industry-standard test cards. The trailing four digits identify the test scenario. Substitute your real sandbox numbers when wiring this up against an actual platform.
 
 ## Test customers
 

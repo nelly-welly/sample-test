@@ -1,6 +1,12 @@
 ---
 title: Webhooks
 description: Receive PayCart events at a URL you control.
+type: task
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [integration, webhooks, events]
 ---
 
 # Webhooks

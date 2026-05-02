@@ -1,6 +1,12 @@
 ---
 title: Navigate the dashboard
 description: A first-day tour of the PayCart Merchant Dashboard.
+type: task
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [dashboard, getting-started]
 ---
 
 # Navigate the dashboard

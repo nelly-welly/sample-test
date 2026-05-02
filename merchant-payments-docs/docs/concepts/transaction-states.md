@@ -1,6 +1,12 @@
 ---
 title: Transaction states
 description: The full state machine for PayCart payment objects.
+type: concept
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [payments, states, concepts]
 ---
 
 # Transaction states
