@@ -28,7 +28,7 @@ last_reviewed: 2026-05-04
 
 The refund row shows:
 
-| Column | What it tells you |
+| Field | What it tells you |
 | ------ | ----------------- |
 | **ID** | The refund's own ID. Click to open the detail panel. |
 | **Linked payment** | The original payment ID. Click to see the payment that's being refunded. |
