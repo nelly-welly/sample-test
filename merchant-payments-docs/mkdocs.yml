@@ -33,7 +33,6 @@ nav:
       - Glossary: reference/glossary.md
       - Test data: reference/test-data.md
       - Status codes: reference/status-codes.md
-  - About these docs: about-these-docs.md
 
 theme:
   name: material
