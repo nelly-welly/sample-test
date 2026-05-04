@@ -1,6 +1,12 @@
 ---
 title: Onboarding overview
 description: How to register a merchant on PayCart and what verification requires.
+type: task
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [onboarding, kyc, compliance]
 ---
 
 # Onboarding overview

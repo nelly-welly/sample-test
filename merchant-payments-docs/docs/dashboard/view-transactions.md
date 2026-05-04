@@ -1,6 +1,12 @@
 ---
 title: View transactions
 description: Find any payment in the PayCart Merchant Dashboard in seconds.
+type: task
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [dashboard, payments, operations]
 ---
 
 # View transactions
@@ -31,7 +37,7 @@ Clicking any row opens a side panel with four tabs.
 A reverse-chronological list of every event that affected the payment. A typical succeeded payment looks like:
 
 ```text
-2026-04-29 14:02:11   succeeded         Captured 4200 USD from card ending 4242
+2026-04-29 14:02:11   succeeded         Captured 4200 USD from card ending XXXX
 2026-04-29 14:02:09   authorized        Visa approved
 2026-04-29 14:02:08   processing        Sent to network
 2026-04-29 14:02:07   created           Payment intent created

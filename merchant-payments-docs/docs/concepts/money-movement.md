@@ -1,6 +1,12 @@
 ---
 title: Money movement
 description: Who holds the funds at each stage of a PayCart payment, and how that shapes your accounting.
+type: concept
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [payments, finance, concepts]
 ---
 
 # Money movement

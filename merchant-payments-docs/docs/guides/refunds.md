@@ -1,6 +1,12 @@
 ---
 title: Process refunds
 description: How to refund a captured payment in PayCart, including partial refunds.
+type: task
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [refunds, payments, operations]
 ---
 
 # Process refunds

@@ -1,6 +1,12 @@
 ---
 title: Status codes
 description: HTTP status codes and PayCart error codes you'll encounter, and what they mean.
+type: reference
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [errors, reference, status-codes]
 ---
 
 # Status codes

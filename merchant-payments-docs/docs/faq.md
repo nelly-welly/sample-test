@@ -1,6 +1,12 @@
 ---
 title: FAQ
 description: Frequently asked questions about the PayCart Merchant Payments Platform.
+type: faq
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [faq, support]
 ---
 
 # FAQ

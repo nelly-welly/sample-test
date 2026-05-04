@@ -1,6 +1,12 @@
 ---
 title: PayCart Merchant Docs
 description: Documentation home for the PayCart Merchant Payments Platform.
+type: landing
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [home, overview]
 ---
 
 # PayCart Merchant Docs

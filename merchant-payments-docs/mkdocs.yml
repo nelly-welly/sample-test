@@ -1,6 +1,7 @@
 site_name: "PayCart Merchant Docs"
 site_description: "Documentation for the PayCart Merchant Payments Platform — a fictional sample site for portfolio purposes."
 site_author: "Sample Documentation Team"
+site_url: "https://nelly-welly.github.io/sample-test/"
 
 nav:
   - Home: index.md
@@ -32,7 +33,6 @@ nav:
       - Glossary: reference/glossary.md
       - Test data: reference/test-data.md
       - Status codes: reference/status-codes.md
-  - About these docs: about-these-docs.md
 
 theme:
   name: material

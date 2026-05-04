@@ -1,6 +1,12 @@
 ---
 title: Glossary
 description: Single-sentence definitions for the terms used throughout PayCart docs.
+type: reference
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [glossary, reference]
 ---
 
 # Glossary

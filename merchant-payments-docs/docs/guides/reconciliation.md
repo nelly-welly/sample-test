@@ -1,6 +1,12 @@
 ---
 title: Reconcile transactions
 description: How to match PayCart payouts to your bank statement and your accounting system.
+type: task
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [reconciliation, finance, operations]
 ---
 
 # Reconcile transactions

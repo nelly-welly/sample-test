@@ -1,6 +1,12 @@
 ---
 title: Sample merchant
 description: A worked example of a fully populated PayCart merchant profile, using fictional data.
+type: sample
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [sample, merchant, onboarding]
 ---
 
 # Sample merchant

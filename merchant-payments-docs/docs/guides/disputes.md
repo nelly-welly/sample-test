@@ -1,6 +1,12 @@
 ---
 title: Manage disputes
 description: How to respond to chargebacks in PayCart.
+type: task
+author: Sample Author
+draft: false
+created: 2026-04-30
+updated: 2026-04-30
+tags: [disputes, chargebacks, operations]
 ---
 
 # Manage disputes
