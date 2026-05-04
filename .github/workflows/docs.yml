@@ -29,13 +29,13 @@ jobs:
       - name: Install dependencies
         run: pip install mkdocs-material
 
-      - name: Build site
+      - name: Build site under sub-path
         working-directory: merchant-payments-docs
-        run: mkdocs build --strict
+        run: mkdocs build --strict --site-dir ../_site/merchant-payments-docs
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: merchant-payments-docs/site
+          path: _site
 
   deploy:
     needs: build
