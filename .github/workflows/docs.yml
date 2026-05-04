@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - issue-03-Add-sample-topic-types
   workflow_dispatch:
 
 permissions:
@@ -29,13 +28,12 @@ jobs:
       - name: Install dependencies
         run: pip install mkdocs-material
 
-      - name: Build site under sub-path
-        working-directory: merchant-payments-docs
-        run: mkdocs build --strict --site-dir ../_site/merchant-payments-docs
+      - name: Build site
+        run: mkdocs build --strict
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: site
 
   deploy:
     needs: build

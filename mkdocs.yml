@@ -1,0 +1,55 @@
+site_name: "Refund workflow — sample tech-writer portfolio"
+site_description: "An end-to-end documentation walkthrough for issuing and reconciling a refund on a fictional payments platform."
+site_author: "Sample Author"
+site_url: "https://nelly-welly.github.io/sample-test/"
+
+nav:
+  - Home: index.md
+  - Refund workflow:
+      - Overview: refund-workflow/index.md
+      - Before you start: refund-workflow/before-you-start.md
+      - "Step 1 — Create the refund": refund-workflow/1-create.md
+      - "Step 2 — Confirm in the dashboard": refund-workflow/2-confirm.md
+      - "Step 3 — Reconcile the ledger": refund-workflow/3-reconcile.md
+      - Troubleshoot: refund-workflow/troubleshoot.md
+      - Reference: refund-workflow/reference.md
+  - About this portfolio: about.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - footnotes
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets:
+      base_path:
+        - docs
+      check_paths: true
+
+extra:
+  generator: false
+
+copyright: "Sample portfolio content. PayCart is fictional. All names, IDs, amounts, and events are invented."
