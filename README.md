@@ -4,7 +4,7 @@ Sample documentation portfolio — a fictional payments platform called **PayCar
 
 ## Read the docs
 
-**Live site: https://nelly-welly.github.io/sample-test/**
+**Live site: https://nelly-welly.github.io/sample-test/merchant-payments-docs/**
 
 The site is published from `main` via GitHub Pages, so you don't need to install anything to read it. The rest of this README is the **rationale** behind how the site is built — what decisions were made and why.
 
@@ -119,7 +119,7 @@ merchant-payments-docs/
 
 ## Contributing — preview locally
 
-You don't need to run anything locally to read the docs (use the [live site](https://nelly-welly.github.io/sample-test/)). To preview edits before pushing:
+You don't need to run anything locally to read the docs (use the [live site](https://nelly-welly.github.io/sample-test/merchant-payments-docs/)). To preview edits before pushing:
 
 ```bash
 pip install mkdocs-material
