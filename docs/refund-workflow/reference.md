@@ -5,7 +5,6 @@ type: reference
 topic_id: r_refund-api
 audience: developer
 sequence: 7
-status: published
 last_reviewed: 2026-05-04
 ---
 

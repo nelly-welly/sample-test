@@ -7,7 +7,6 @@ audience: all
 level: foundational
 sequence: 1
 estimated_time: "~5 minutes to read"
-status: published
 last_reviewed: 2026-05-04
 ---
 

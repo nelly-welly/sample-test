@@ -7,7 +7,6 @@ audience: developer
 level: intermediate
 sequence: 3
 estimated_time: "~1 minute on the wire"
-status: published
 last_reviewed: 2026-05-04
 ---
 
