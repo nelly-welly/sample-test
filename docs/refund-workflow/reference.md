@@ -158,4 +158,4 @@ Fires when a `pending` refund moves to `failed`. The `data.failure_code` field i
 - Disputes and chargeback handling.
 - SDK installation and configuration.
 
-A real product reference would cover them. They're omitted here on purpose — see [About this portfolio](../about.md).
+A real product reference would cover them. They're omitted here on purpose.

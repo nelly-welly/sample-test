@@ -46,7 +46,7 @@ If you have ten minutes, start at [the workflow overview](refund-workflow/index.
 
     You're evaluating the writing, not running the workflow.
 
-    Start at **[Refund workflow overview](refund-workflow/index.md)**, then read **[About this portfolio](about.md)** for the editorial decisions and the full DITA mapping.
+    Start at **[Refund workflow overview](refund-workflow/index.md)**.
 
 ---
 

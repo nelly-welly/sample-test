@@ -46,7 +46,7 @@ A customer charged $100.00 USD on 2026-04-12 requests a $25.00 partial refund th
 
 ## What's not on this page
 
-There's no full API reference, no SDK changelog, no auth setup, and no payment-creation procedure. Those exist in a real PayCart product but would distract from the one thing this site is here to demonstrate. See [About this portfolio](../about.md) for the rationale.
+There's no full API reference, no SDK changelog, no auth setup, and no payment-creation procedure. Those exist in a real PayCart product but would distract from the one thing this site is here to demonstrate.
 
 ## Related links
 
