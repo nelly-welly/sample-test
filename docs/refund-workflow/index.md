@@ -25,6 +25,21 @@ This workflow follows a single refund from request to reconciliation. It crosses
 
 ### The three steps
 
+```mermaid
+flowchart LR
+    A([Customer requests refund]) --> B[**Step 1**<br/>Create the refund<br/><i>Developer · ~1 min</i>]
+    B --> C[**Step 2**<br/>Confirm in the dashboard<br/><i>Operations · ~5 min</i>]
+    C --> D[**Step 3**<br/>Reconcile the ledger<br/><i>Finance · ~15 min, T+1</i>]
+    D --> E([Refund closed])
+
+    classDef dev fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+    classDef ops fill:#fff3e0,stroke:#ef6c00,color:#e65100
+    classDef fin fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+    class B dev
+    class C ops
+    class D fin
+```
+
 | # | Step | Owner | Time | What success looks like |
 | - | ---- | ----- | ---- | ---------------------- |
 | 1 | [Create the refund](create-refund.md) | Developer | ~1 minute on the wire | API returns `refund.status = "pending"` and a refund ID. |
