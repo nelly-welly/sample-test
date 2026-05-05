@@ -7,10 +7,10 @@ nav:
   - Home: index.md
   - Refund workflow:
       - Overview: refund-workflow/index.md
-      - Before you start: refund-workflow/before-you-start.md
-      - "Step 1 — Create the refund": refund-workflow/1-create.md
-      - "Step 2 — Confirm in the dashboard": refund-workflow/2-confirm.md
-      - "Step 3 — Reconcile the ledger": refund-workflow/3-reconcile.md
+      - Before you start: refund-workflow/before-you-begin.md
+      - "Step 1 — Create the refund": refund-workflow/create-refund.md
+      - "Step 2 — Confirm in the dashboard": refund-workflow/confirm-in-the-dashboard.md
+      - "Step 3 — Reconcile the ledger": refund-workflow/reconcile-ledger.md
       - Troubleshoot: refund-workflow/troubleshoot.md
       - Reference: refund-workflow/reference.md
   - About this portfolio: about.md
