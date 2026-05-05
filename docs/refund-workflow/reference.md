@@ -2,6 +2,7 @@
 title: Reference
 description: Only the API fields, status codes, and webhook events used in this workflow.
 type: reference
+topic_id: r_refund-api
 audience: developer
 sequence: 7
 status: published
@@ -12,13 +13,15 @@ last_reviewed: 2026-05-04
 
 *Reference · For developers · Step 7 of 7*
 
-Only the surface area used in this workflow is listed here. For everything else, consult a real PayCart product (this is a portfolio sample).
+## Short description
+
+Lookup tables for every API endpoint, resource, status, and webhook event the refund workflow exercises. The surface here is intentionally narrow — anything not used in this workflow is not listed.
 
 ## `POST /v1/refunds`
 
 Issue a refund against a captured payment.
 
-### Request
+### Synopsis
 
 ```http
 POST /v1/refunds HTTP/1.1
@@ -35,6 +38,8 @@ Content-Type: application/json
 }
 ```
 
+### Properties
+
 | Field | Type | Required | Notes |
 | ----- | ---- | -------- | ----- |
 | `payment_id` | string | yes | Must reference a payment in the `captured` state. |
@@ -42,17 +47,19 @@ Content-Type: application/json
 | `currency` | string | yes | ISO 4217. Must match the original payment's currency. |
 | `reason` | string | no | One of: `customer_request`, `duplicate`, `fraudulent`, `other`. Used for analytics; does not affect processing. |
 
-`Idempotency-Key` is **required** as a header on this endpoint. See [Before you start — Why idempotency matters here](before-you-start.md#why-idempotency-matters-here).
+`Idempotency-Key` is **required** as a header on this endpoint. See [Before you start — Why idempotency matters here](before-you-begin.md#why-idempotency-matters-here).
 
-### Response
+### Response codes
 
-`201 Created` with the new refund resource. See [Refund object](#refund-object).
-
-`400 amount_exceeds_remaining` if the amount exceeds `remaining_refundable_amount`. See [Troubleshoot](troubleshoot.md#amount-exceeds-remaining).
-
-`409 idempotency_conflict` if the same `Idempotency-Key` was used for a different request body within the last 24 hours.
+| Status | Meaning |
+| ------ | ------- |
+| `201 Created` | Refund accepted; returns the new refund resource (see [Refund object](#refund-object)). |
+| `400 amount_exceeds_remaining` | The amount exceeds `remaining_refundable_amount`. See [Troubleshoot](troubleshoot.md#amount-exceeds-remaining). |
+| `409 idempotency_conflict` | The same `Idempotency-Key` was used for a different request body within the last 24 hours. |
 
 ## Refund object
+
+### Synopsis
 
 ```json
 {
@@ -69,7 +76,20 @@ Content-Type: application/json
 }
 ```
 
-`failure_code` is `null` until status becomes `failed`.
+### Properties
+
+| Field | Type | Notes |
+| ----- | ---- | ----- |
+| `id` | string | Refund identifier prefixed `rfd_`. |
+| `object` | string | Always `refund`. |
+| `payment_id` | string | Identifier of the captured payment this refund applies to. |
+| `amount` | integer | Refund amount in the smallest currency unit. |
+| `currency` | string | ISO 4217. |
+| `status` | string | One of: `pending`, `succeeded`, `failed`, `canceled`. See [Refund status codes](#refund-status-codes). |
+| `reason` | string | The reason supplied at creation, or `null`. |
+| `failure_code` | string \| null | `null` until status becomes `failed`. See [Troubleshoot — Refund failed in terminal state](troubleshoot.md#refund-failed-in-terminal-state). |
+| `created_at` | string (ISO 8601) | When the refund was first submitted. |
+| `updated_at` | string (ISO 8601) | When the status last changed. |
 
 ## Refund status codes
 
@@ -86,7 +106,7 @@ Two events are emitted for every refund.
 
 ### `refund.succeeded`
 
-Fires when a `pending` refund moves to `succeeded`. Use this as the trigger for marking the customer ticket resolved.
+#### Synopsis
 
 ```json
 {
@@ -103,9 +123,13 @@ Fires when a `pending` refund moves to `succeeded`. Use this as the trigger for 
 }
 ```
 
+#### Properties
+
+Fires when a `pending` refund moves to `succeeded`. Use this as the trigger for marking the customer ticket resolved.
+
 ### `refund.failed`
 
-Fires when a `pending` refund moves to `failed`. Use this as the trigger for [Troubleshoot — Refund failed in terminal state](troubleshoot.md#refund-failed-in-terminal-state).
+#### Synopsis
 
 ```json
 {
@@ -123,6 +147,10 @@ Fires when a `pending` refund moves to `failed`. Use this as the trigger for [Tr
 }
 ```
 
+#### Properties
+
+Fires when a `pending` refund moves to `failed`. The `data.failure_code` field identifies the cause. Use this as the trigger for [Troubleshoot — Refund failed in terminal state](troubleshoot.md#refund-failed-in-terminal-state).
+
 ## What's not in this reference
 
 - Authentication setup, rotating keys, organization-level scopes.
@@ -130,4 +158,4 @@ Fires when a `pending` refund moves to `failed`. Use this as the trigger for [Tr
 - Disputes and chargeback handling.
 - SDK installation and configuration.
 
-A real product reference would cover them. They're omitted here on purpose — see [About this portfolio](../about.md).
+A real product reference would cover them. They're omitted here on purpose.
