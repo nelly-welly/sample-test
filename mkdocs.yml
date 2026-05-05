@@ -51,4 +51,7 @@ markdown_extensions:
 extra:
   generator: false
 
+extra_css:
+  - stylesheets/extra.css
+
 copyright: "Sample portfolio content. PayCart is fictional. All names, IDs, amounts, and events are invented."

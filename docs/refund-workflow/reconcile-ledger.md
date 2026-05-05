@@ -7,7 +7,6 @@ audience: finance
 level: intermediate
 sequence: 5
 estimated_time: "~15 minutes (T+1)"
-status: published
 last_reviewed: 2026-05-04
 ---
 

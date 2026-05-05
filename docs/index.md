@@ -4,7 +4,6 @@ description: Senior technical-writer portfolio — a single, end-to-end refund w
 type: topic
 topic_id: topic_home
 audience: all
-status: published
 last_reviewed: 2026-05-04
 ---
 

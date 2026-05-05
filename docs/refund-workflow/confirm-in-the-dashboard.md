@@ -7,7 +7,6 @@ audience: operations
 level: foundational
 sequence: 4
 estimated_time: "~5 minutes"
-status: published
 last_reviewed: 2026-05-04
 ---
 
