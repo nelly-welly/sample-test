@@ -1,4 +1,4 @@
-site_name: "Refund workflow — sample tech-writer portfolio"
+site_name: "Refund workflow — sample topic"
 site_description: "An end-to-end documentation walkthrough for issuing and reconciling a refund on a fictional payments platform."
 site_author: "Sample Author"
 site_url: "https://nelly-welly.github.io/sample-test/"
@@ -6,6 +6,7 @@ site_url: "https://nelly-welly.github.io/sample-test/"
 nav:
   - Home: index.md
   - Concepts:
+      - "Payment operations at a glance": concept-topics/index.md
       - "Authorize a payment": concept-topics/authorize-overview.md
       - "Charge a payment": concept-topics/charge-overview.md
       - "Cancel a payment": concept-topics/cancel-overview.md
