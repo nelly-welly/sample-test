@@ -46,7 +46,7 @@ Content-Type: application/json
 | `currency` | string | yes | ISO 4217. Must match the original payment's currency. |
 | `reason` | string | no | One of: `customer_request`, `duplicate`, `fraudulent`, `other`. Used for analytics; does not affect processing. |
 
-`Idempotency-Key` is **required** as a header on this endpoint. See [Before you start — Why idempotency matters here](before-you-begin.md#why-idempotency-matters-here).
+`Idempotency-Key` is **required** as a header on this endpoint. See [Before you start — Why do you need the same key for refund](before-you-begin.md#why-do-you-need-the-same-key-for-refund).
 
 ### Response codes
 

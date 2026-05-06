@@ -6,6 +6,9 @@ site_url: "https://nelly-welly.github.io/sample-test/"
 nav:
   - Home: index.md
   - Concepts:
+      - "Authorize a payment": concept-topics/authorize-overview.md
+      - "Charge a payment": concept-topics/charge-overview.md
+      - "Cancel a payment": concept-topics/cancel-overview.md
       - "Refund a payment": concept-topics/refund-overview.md
   - Refund workflow:
       - Overview: refund-workflow/index.md
