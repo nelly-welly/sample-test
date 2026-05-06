@@ -13,27 +13,27 @@ last_reviewed: 2026-05-06
 ## What is a cancellation?
 
 <!-- --8<-- [start:cancel-intro] -->
-A **cancel** releases a previously authorized hold on the customer's payment method **before** the funds are charged. It moves no money — it simply tells the network that the merchant will not be capturing the authorization, and the customer's available balance returns to its pre-authorization state.
+A **cancel** releases a previously authorized hold on the customer's payment method **before** the funds are charged. It moves no money — it only informs the payment network that the merchant will not be capturing the authorization, and the customer's available balance returns to its pre-authorization state.
 
-Cancel is **not** a refund. Refunds return funds that have already been charged; cancels release funds that have only been held. Once a payment has been **charged**, cancel is no longer available — you must issue a [refund](refund-overview.md) instead.
+Cancel is **not** a refund. Refunds return money that is already charged; cancels release funds that were only held. Once a payment is **charged**, cancel is no longer available — you must issue a [refund](refund-overview.md) instead.
 <!-- --8<-- [end:cancel-intro] -->
 
 ## When to cancel
 
 Cancel a payment when:
 
-- The customer cancels the order **before** you ship or fulfil.
-- A fraud rule fires after authorization and you don't want to capture.
-- You authorized more than you ultimately need to charge, and you want to release the surplus immediately rather than waiting for the network to expire it.
-- The order failed validation (out of stock, address invalid) before charge.
+- the customer cancels the order **before** you ship or fulfil.
+- a fraud rule fires after authorization and you don't want to capture.
+- you authorized more than you ultimately need to charge, and you want to release the surplus immediately rather than waiting for the network to expire it.
+- the order failed validation (out of stock, address invalid) before charge.
 
-If the payment has already been **charged**, cancel will be rejected — issue a [refund](refund-overview.md) instead.
+If the payment is **charged**, you have the option to issue a [refund](refund-overview.md).
 
-## Where cancellation fits in the payment lifecycle
+## Where the cancellation fits in the payment lifecycle
 
 ```mermaid
 flowchart LR
-    A([Authorize]) --> B{Decision}
+    A([Authorize]) --> B{Outcome}
     B -- charge --> C([Charged])
     B -- cancel --> X([Canceled])
     B -- timeout --> Y([Expired])
@@ -45,7 +45,7 @@ flowchart LR
     class A,C money
 ```
 
-Cancel is **free** and **near-instant**. There is no settlement cost, no fee, and the customer's available balance is restored as soon as their bank processes the release — usually within minutes, occasionally up to one business day depending on the issuer.
+Cancel is **free** and **almost instant**. There is no settlement cost, no fee, and the customer's available balance is restored as soon as their bank processes the release — usually within minutes, occasionally up to one business day depending on the issuer.
 
 ## Cancel vs refund — at a glance
 
@@ -67,9 +67,9 @@ Cancel is **free** and **near-instant**. There is no settlement cost, no fee, an
 
 ## Constraints
 
-- **Idempotency keys are required** on `POST /v1/cancels`. A retried cancel without one is harmless but can be confusing in audit logs.
+- **Idempotency keys are required** on `POST /v1/cancels`. An expired cancel without one is harmless but can be confusing in audit logs.
 - **The payment must be authorized but not charged.** Charged payments cannot be canceled — refund instead.
-- **Cancel cannot be partial.** A cancel always releases the entire authorized amount. To capture less than authorized, do a partial charge — the remainder will expire or can be canceled.
+- **Cancel cannot be partial.** A cancel always releases the entire authorized amount. To capture less than authorized, do a partial charge — the remainder will expire or can be canceled later.
 - **Once canceled, an authorization cannot be reinstated.** Re-authorize from scratch.
 
 ## Example
@@ -84,7 +84,7 @@ Continuing the example from [Authorize a payment](authorize-overview.md): the me
 
 ## What's not on this page
 
-This page does not cover **how** to call the cancel endpoint, the dashboard view of canceled holds, or partial captures (which leave a remainder that may need to be canceled separately). Those live in the task topics and the API reference.
+This page does not cover **how** to call the cancel endpoint, the dashboard view of canceled holds, or partial captures (which leave a remainder that may need to be canceled separately). Those are available in the task topics and the API reference.
 
 ## Related links
 
