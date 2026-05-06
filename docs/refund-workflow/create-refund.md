@@ -21,9 +21,9 @@ Issue a refund against a captured PayCart payment using the `POST /v1/refunds` e
 ## Prerequisites
 
 - A captured payment ID. The sandbox provides `pay_01HABCDEF12345` pre-loaded with $100.00 USD.
-- A sandbox API key (prefix `sk_test_`). See [Before you start — What you need](before-you-begin.md#what-you-need).
+- A sandbox API key (prefix `sk_test_`). See [Before you start — What you need](before-you-begin.md#what-you-need-for-a-refund).
 - A registered webhook endpoint subscribed to `refund.succeeded` and `refund.failed`.
-- An idempotency-key generation strategy. See [Before you start — Why idempotency matters here](before-you-begin.md#why-idempotency-matters-here).
+- An idempotency-key generation strategy. See [Before you start — Why do you need the same key for refund](before-you-begin.md#why-do-you-need-the-same-key-for-refund).
 
 --8<-- "includes/notices/sandbox-only.md"
 

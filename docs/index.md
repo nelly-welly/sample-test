@@ -13,7 +13,7 @@ last_reviewed: 2026-05-06
 
 This site is a **portfolio piece** for a senior technical writer. Instead of a sprawling product docs site, it focuses on **one** workflow — issuing and reconciling a refund — and follows it end-to-end across the three audiences who actually own that work. Every page is structured against [DITA](https://en.wikipedia.org/wiki/Darwin_Information_Typing_Architecture) topic types so a reviewer can see the editorial discipline directly in the markup.
 
-> [!NOTE]  abstract "What this site demonstrates"
+!!! abstract "What this site demonstrates"
     - **One workflow, three audiences.** The same refund travels from a developer's API call to an ops associate's dashboard to a finance analyst's ledger. Each page is written for the reader who actually does it.
     - **DITA topic typing.** Every page declares a `concept`, `task`, `reference`, or `troubleshooting` type and conforms to that type's body structure.
     - **Restraint in reference.** The Reference page lists *only* the API fields, status codes, and webhook events used in this workflow — not a full API.

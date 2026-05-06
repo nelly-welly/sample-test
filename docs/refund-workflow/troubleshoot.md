@@ -77,7 +77,7 @@ A symptom-driven decision tree for the five failure patterns that account for ro
 
 1. **Determine which refund is the canonical one** — usually the earlier `created_at`.
 2. **Cancel the duplicate** with `POST /v1/refunds/{id}/cancel`. Only refunds in `pending` state can be canceled. If both are `succeeded`, you cannot cancel; you must issue a new **payment** to the customer for the duplicate amount.
-3. **Fix the retry path** so future retries reuse the original `Idempotency-Key`. See [Before you start — Why idempotency matters here](before-you-begin.md#why-idempotency-matters-here).
+3. **Fix the retry path** so future retries reuse the original `Idempotency-Key`. See [Before you start — Why do you need the same key for refund](before-you-begin.md#why-do-you-need-the-same-key-for-refund).
 
 ## Refund missing from export
 
