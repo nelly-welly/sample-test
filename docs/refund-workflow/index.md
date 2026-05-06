@@ -1,6 +1,6 @@
 ---
 title: Refund workflow overview
-description: One refund travels through three teams — developer, operations, finance. Here is how each step connected.
+description: One refund travels through three teams — developer, operations, finance. Here is how each step connects.
 type: concept
 topic_id: c_workflow-overview
 audience: all
@@ -10,13 +10,17 @@ estimated_time: "~5 minutes to read"
 last_reviewed: 2026-05-04
 ---
 
-## Overview
+# Refund workflow
+
+*Concept · For all readers · Foundational · Step 1 of 7 · ~5 minutes*
+
+## Short description
 
 This workflow follows a single refund from request to reconciliation. It crosses three roles — developer, operations, finance — and the handoffs between them are explicit and the failure modes are documented.
 
 ## Description
 
-> [!> [!NOTE] ] "When to use this workflow"
+!!! info "When to use this workflow"
     Use this end-to-end procedure when a customer requests a full or partial refund on a captured payment. For chargebacks initiated by the cardholder's bank, see *Manage disputes* — that's a different lifecycle and is out of scope for this portfolio.
 
 ### The three steps

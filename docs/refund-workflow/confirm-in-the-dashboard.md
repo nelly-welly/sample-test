@@ -58,7 +58,7 @@ Use this task whenever a developer has issued a refund and the customer is await
 
 ## Result
 
-The customer ticket is closed with a refund-issued note  containing the refund ID. The dashboard accurately reflects both the refund's terminal state and the payment's reduced refundable balance.
+The customer ticket is closed with a refund-issued note containing the refund ID. The dashboard accurately reflects both the refund's terminal state and the payment's reduced refundable balance.
 
 ## Example
 

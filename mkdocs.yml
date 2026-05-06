@@ -5,8 +5,6 @@ site_url: "https://nelly-welly.github.io/sample-test/"
 
 nav:
   - Home: index.md
-  - Concepts:
-      - "Refund a payment": concept-topics/refund-overview.md
   - Refund workflow:
       - Overview: refund-workflow/index.md
       - Before you start: refund-workflow/before-you-begin.md

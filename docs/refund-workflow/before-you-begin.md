@@ -1,6 +1,6 @@
 ---
 title: Before you start
-description: Prerequisites, the payment lifecycle in one paragraph
+description: Prerequisites, the payment lifecycle in one paragraph, and why idempotency keys are non-negotiable.
 type: concept
 topic_id: c_before-you-begin
 audience: all
@@ -10,15 +10,19 @@ estimated_time: "~5 minutes to read"
 last_reviewed: 2026-05-04
 ---
 
-# Before you begin
+# Before you start
 
-This page covers prerequisites for **all three steps** required for the refund workflow.
+*Concept · For all readers · Foundational · Step 2 of 7 · ~5 minutes*
+
+## Short description
+
+This page covers prerequisites for **all three steps** of the workflow. Read it once; the rest of the workflow assumes it.
 
 --8<-- "includes/notices/sandbox-only.md"
 
-### What you need for a refund?
+## Description
 
-The following table describes the roles and the prerequisites for a refund transaction:
+### What you need
 
 | Role | What you need | Where to get it |
 | ---- | ------------- | --------------- |
@@ -28,7 +32,7 @@ The following table describes the roles and the prerequisites for a refund trans
 
 You also need a **captured** payment to refund. Use payment ID `pay_01HABCDEF12345` in the sandbox — it's pre-loaded with $100.00 USD captured against a sample card.
 
-### The payment workflow
+### The payment lifecycle in one paragraph
 
 A PayCart payment moves through five states: **created → authorized → captured → refunded** (or, if a chargeback is opened, **disputed → won/lost**). A refund is only valid against a payment in the **captured** state. Issuing a refund creates a new resource — a `refund` — that is linked to the original payment and reduces its remaining refundable balance. A payment can have many partial refunds, but the sum of refunded amounts can never exceed the captured amount.
 
@@ -38,7 +42,7 @@ created → authorized → captured ── refund (full)  → refunded
                                 └─ chargeback opened → disputed → won | lost
 ```
 
-### Why do you need the same key for refund
+### Why idempotency matters here
 
 Refunds are the most expensive operation to issue twice. A duplicate refund moves money out of your settlement account that you cannot reclaim without contacting the customer.
 
@@ -46,7 +50,7 @@ Every request to `POST /v1/refunds` **must** include an `Idempotency-Key` header
 
 --8<-- "includes/notices/idempotency.md"
 
-A common, safe pattern: `Idempotency-Key: refund-<your-internal-refund-request-id>`. Use the same key on automatic retries (network timeout, 5xx). You must never use the same transaction key for a different refund.
+A common, safe pattern: `Idempotency-Key: refund-<your-internal-refund-request-id>`. Use the same key on automatic retries (network timeout, 5xx). Never reuse a key for a different refund.
 
 ## Example
 
