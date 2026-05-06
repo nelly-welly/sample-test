@@ -22,19 +22,19 @@ A successful charge is the prerequisite for any later **refund** — funds that 
 
 Charge a payment when:
 
-- You have a prior authorization and the order is now ready to fulfil (most common ecommerce flow).
-- You want a single-step **authorize + capture** because you have nothing to verify (digital goods, subscriptions, donations).
-- The final amount is now known and you are ready to settle.
+- you have a prior authorization and the order is now ready to fulfil (most common ecommerce flow).
+- you want a single-step **authorize + capture** because you have nothing to verify (digital goods, subscriptions, donations).
+- the final amount is now known and you are ready to settle.
 
 If you are not yet ready to take the money, use [authorization](authorize-overview.md) and charge later.
 
-## Where a charge fits in the payment lifecycle
+## Where the charge fits in the payment lifecycle
 
 ```mermaid
 flowchart LR
     A([Authorize]) --> B([Charge])
     Z([Direct charge]) --> B
-    B --> C{After charge}
+    B --> C{Outcome}
     C -- refund --> D([Refunded])
     C -- partial refund --> B
     C -- no action --> E([Settled])
@@ -85,7 +85,7 @@ Continuing the example from [Authorize a payment](authorize-overview.md): a cust
 
 ## What's not on this page
 
-This page does not cover **how** to call the charge endpoint, settlement reporting, or fee calculation. Those live in the task topics and the API reference.
+This page does not cover **how** to call the charge endpoint, settlement reporting, or fee calculation. Those are available in the task topics and the API reference.
 
 ## Related links
 

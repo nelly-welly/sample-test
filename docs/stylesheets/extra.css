@@ -1,4 +1,0 @@
-/* Hide the chevron / disclosure icons in the left navigation. */
-.md-nav--primary .md-nav__icon {
-  display: none;
-}
