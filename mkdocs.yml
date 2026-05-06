@@ -1,6 +1,6 @@
-site_name: "Refund workflow — sample topic"
+site_name: "Sample Documentation"
 site_description: "An end-to-end documentation walkthrough for issuing and reconciling a refund on a fictional payments platform."
-site_author: "Sample Author"
+site_author: "Neelam"
 site_url: "https://nelly-welly.github.io/sample-test/"
 
 nav:
